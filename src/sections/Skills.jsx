@@ -6,11 +6,11 @@ import { SiMysql, SiTailwindcss, SiJavascript } from "react-icons/si";
 export default function Skills() {
   const skills = [
     { name: "React", level: 50, icon: <FaReact className="text-cyan-400" />, color: "bg-cyan-400" },
-    { name: "MySQL", level: 70, icon: <SiMysql className="text-blue-500" />, color: "bg-blue-500" },
-    { name: "Python", level: 60, icon: <FaPython className="text-yellow-400" />, color: "bg-yellow-400" },
+    { name: "MySQL", level: 50, icon: <SiMysql className="text-blue-500" />, color: "bg-blue-500" },
+    { name: "Python", level: 50, icon: <FaPython className="text-yellow-400" />, color: "bg-yellow-400" },
     { name: "PHP", level: 20, icon: <FaPhp className="text-indigo-400" />, color: "bg-indigo-400" },
-    { name: "Tailwind CSS", level: 60, icon: <SiTailwindcss className="text-sky-400" />, color: "bg-sky-400" },
-    { name: "JavaScript", level: 70, icon: <SiJavascript className="text-yellow-300" />, color: "bg-yellow-300" },
+    { name: "Tailwind CSS", level: 50, icon: <SiTailwindcss className="text-sky-400" />, color: "bg-sky-400" },
+    { name: "JavaScript", level: 50, icon: <SiJavascript className="text-yellow-300" />, color: "bg-yellow-300" },
   ];
 
   // แปลงเปอร์เซ็นต์เป็น 3 ระดับ (English Version)
@@ -23,7 +23,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
       <div className="flex flex-col items-center mb-12">
-        <h2 className="text-4xl font-bold text-white mb-2 font-sans">Skills & Expertise</h2>
+        <h2 className="text-4xl font-bold text-white mb-2 font-sans">Skills</h2>
         <div className="h-1 w-20 bg-cyan-500 rounded-full shadow-[0_0_10px_#22d3ee]"></div>
       </div>
 

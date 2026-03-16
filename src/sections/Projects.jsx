@@ -24,7 +24,7 @@ const Projects = () => {
       image: moImage,
       device: "mobile",
       desc: "แอปพลิเคชันสำหรับเข้าถึงบทเรียนผ่านมือถือ",
-      details: "รายละเอียดเชิงลึก: พัฒนาด้วย React Native เพื่อให้ใช้งานได้ทั้ง iOS และ Android พร้อมระบบ Push Notification",
+      details: "รายละเอียดเชิงลึก: พัฒนาด้วย React Native เพื่อให้ใช้งาน Android พร้อมระบบ Push Notification",
       tech: ["React Native", "Express", "Node.js"]
     },
     {
@@ -42,7 +42,8 @@ const Projects = () => {
       desc: "ระบบสั่งซื้อหม่าล่าและแจ้งเตือน",
       details: "รายละเอียดเชิงลึก: รองรับการเลือกวัตถุดิบแบบ Custom และคำนวณราคาเรียลไทม์ พร้อมระบบคิวห้องครัว",
       tech: ["Python", "Django", "Javascript"]
-    }
+    },
+ 
   ];
 
   return (

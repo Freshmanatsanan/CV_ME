@@ -17,7 +17,9 @@ const Projects = () => {
       device: "laptop",
       desc: "ระบบจองคอร์สเรียนออนไลน์และซื้อวิดีโอ ที่ออกแบบมาเพื่อการเรียนรู้ที่มีประสิทธิภาพ",
       details: "รายละเอียดเชิงลึก: ระบบนี้รองรับการชำระเงินออนไลน์, การจัดการวิดีโอสตรีมมิ่ง และระบบ Dashboard สำหรับผู้เรียน",
-      tech: ["CSS", "HTML", "Python", "Javascript", "Django"]
+      tech: ["CSS", "HTML", "Python", "Javascript", "Django"],
+      // เพิ่มลิงก์ที่นี่
+      link: "https://docs.google.com/document/d/102z9b8AEhvSnTcMADPQSDUkJEfUhYPFjXTdIryRDdb4/edit?tab=t.p65uq4boi0uw#heading=h.9ngequ6nc432"
     },
     {
       title: "I say ROAR! (Mobile Application)",
@@ -25,7 +27,9 @@ const Projects = () => {
       device: "mobile",
       desc: "แอปพลิเคชันสำหรับเข้าถึงบทเรียนผ่านมือถือ",
       details: "รายละเอียดเชิงลึก: พัฒนาด้วย React Native เพื่อให้ใช้งาน Android พร้อมระบบ Push Notification",
-      tech: ["React Native", "Express", "Node.js"]
+      tech: ["React Native", "Express", "Node.js"],
+      // เพิ่มลิงก์ที่นี่
+      link: "https://docs.google.com/document/d/102z9b8AEhvSnTcMADPQSDUkJEfUhYPFjXTdIryRDdb4/edit?tab=t.p65uq4boi0uw#heading=h.9ngequ6nc432"
     },
     {
       title: "CREPE",
@@ -118,13 +122,28 @@ const Projects = () => {
                 {selectedProject.details}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {selectedProject.tech.map(t => (
                   <span key={t} className="px-4 py-1.5 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-500/20">
                     {t}
                   </span>
                 ))}
               </div>
+
+              {/* เพิ่มปุ่มแสดงลิงก์ หากโปรเจคไหนมี link จะแสดงปุ่มนี้ */}
+              {selectedProject.link && (
+                <div className="mt-4">
+                  <a 
+                    href={selectedProject.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-2.5 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-lg"
+                  >
+                    ดูเอกสารเพิ่มเติม
+                  </a>
+                </div>
+              )}
+
             </motion.div>
           </div>
         )}

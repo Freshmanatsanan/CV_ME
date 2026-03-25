@@ -6,9 +6,9 @@ import HPImage from "../assets/HP.png";
 import HP1Image from "../assets/webHP.png";
 import { LaptopMockup, MobileMockup } from "./DeviceMockup"; 
 import { useState } from "react";
-import { link } from 'framer-motion/client';
-const Experience = () => {
+// หมายเหตุ: import { link } from 'framer-motion/client'; ไม่ได้ถูกใช้งาน สามารถลบออกได้เพื่อลด warning ครับ
 
+const Experience = () => {
     const [selectedExperience, setSelectedExperience] = useState(null);
   
   const workExperience = [
@@ -25,11 +25,10 @@ const Experience = () => {
   ];
 
   return (
-        // 1. สร้าง Container หลักที่คลุมทั้งหน้าจอ
         <div className="h-full relative w-full bg-slate-950 flex flex-col items-center justify-center overflow-hidden rounded-md">
           
-          {/* 2. วาง SparklesCore ให้ลอยเต็มจอ (Absolute) อยู่ชั้นหลังสุด */}
-          <div className="w-full absolute inset-0 h-screen z-1">
+          {/* แก้ไขจุดที่ 1: เพิ่ม pointer-events-none ที่ div นี้ */}
+          <div className="w-full absolute inset-0 h-screen pointer-events-none">
             <SparklesCore
               id="tsparticlesfullpage"
               background="transparent"
@@ -41,12 +40,8 @@ const Experience = () => {
             />
           </div>
 
-                
-
-          
-
-
-    <section  className="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+    {/* แก้ไขจุดที่ 2: เพิ่ม relative และ z-10 ที่ section นี้ */}
+    <section className="relative z-10 pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
       {/* Work Experience Section */}
       <div className="max-w-4xl mx-auto mb-12">
         <h2 className="text-3xl font-bold border-b-4 border-blue-500 pb-2 mb-6">Work Experience</h2>
@@ -57,14 +52,14 @@ const Experience = () => {
               <span className="text-sm font-semibold text-gray-500 italic">{exp.period}</span>
             </div>
             <p className="font-semibold text-gray-700">{exp.company}</p>
-                        <div className="mb-8">
+            
+            <div className="mb-8">
               {exp.device === "laptop" ? (
                 <LaptopMockup imgSrc={exp.image} />
               ) : (
                 <MobileMockup imgSrc={exp.image} />
               )}
             </div>
-
 
             <p className="my-2 text-gray-600">{exp.description}</p>
 
@@ -75,7 +70,8 @@ const Experience = () => {
                 </span>
               ))}
             </div>
-                        <a
+            
+            <a
               href={exp.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -86,7 +82,6 @@ const Experience = () => {
           </div>
         ))}
       </div>
-
     </section>
     </div>
   );

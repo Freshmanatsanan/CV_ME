@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaReact, FaPython, FaPhp } from "react-icons/fa";
-import { SiMysql, SiTailwindcss, SiJavascript } from "react-icons/si";
+import { SiMysql, SiTailwindcss, SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 
 export default function Skills() {
   const skills = [
@@ -11,6 +11,8 @@ export default function Skills() {
     { name: "PHP", level: 20, icon: <FaPhp className="text-indigo-400" />, color: "bg-indigo-400" },
     { name: "Tailwind CSS", level: 50, icon: <SiTailwindcss className="text-sky-400" />, color: "bg-sky-400" },
     { name: "JavaScript", level: 50, icon: <SiJavascript className="text-yellow-300" />, color: "bg-yellow-300" },
+    { name: "HTML", level: 50, icon: <SiHtml5 className="text-orange-500" />, color: "bg-orange-500" },
+    { name: "CSS", level: 50, icon: <SiCss3 className="text-blue-500" />, color: "bg-blue-500" },
   ];
 
   // แปลงเปอร์เซ็นต์เป็น 3 ระดับ (English Version)

@@ -39,7 +39,7 @@ export default function Navbar() {
         </div>
 
         {/* ปุ่มสลับโหมด Dark/Light */}
-        <button 
+        {/* <button 
           onClick={toggleTheme}
           className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:ring-2 ring-cyan-400 transition-all duration-300"
           aria-label="Toggle Dark Mode"
@@ -50,7 +50,7 @@ export default function Navbar() {
             <span className="text-lg">🌙</span> // ไอคอนพระจันทร์เมื่ออยู่โหมดสว่าง
           )
           }
-        </button>
+        </button> */}
       </div>
     </nav>
   );

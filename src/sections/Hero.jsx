@@ -1,5 +1,5 @@
 "use client";
-import meImage from "../assets/me2.png";
+import meImage from "../assets/me4.png";
 import React from "react";
 import { motion } from "framer-motion";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
